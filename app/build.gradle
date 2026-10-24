@@ -32,7 +32,13 @@ android {
     // We ship our own CA cert generation, no NDK/native code needed.
     packagingOptions {
         resources {
-            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE*', 'META-INF/NOTICE*']
+            excludes += [
+                'META-INF/DEPENDENCIES',
+                'META-INF/LICENSE*',
+                'META-INF/NOTICE*',
+                'META-INF/versions/9/OSGI-INF/MANIFEST.MF',
+                'META-INF/*.kotlin_module'
+            ]
         }
     }
 }
